@@ -391,7 +391,7 @@ void MicroBitImage::clear()
   *
   * @note all coordinates originate from the top left of an image.
   */
-int MicroBitImage::setPixelValue(int16_t y , int16_t x, uint8_t value)
+int MicroBitImage::setPixelValue(int16_t x , int16_t y, uint8_t value)
 {
     //sanity check
     if(x >= getWidth() || y >= getHeight() || x < 0 || y < 0)
