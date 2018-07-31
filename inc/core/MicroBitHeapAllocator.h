@@ -136,7 +136,7 @@ inline void native_free(void *p)
 /**
   * Overrides the 'new' operator globally, and redirects calls to the micro:bit heap allocator.
   */
-inline void* operator new(size_t size)
+inline void* operator new(size_t size) throw(std::bad_alloc)
 {
     return microbit_malloc(size);
 }
@@ -144,7 +144,7 @@ inline void* operator new(size_t size)
 /**
   * Overrides the 'new' operator globally, and redirects calls to the micro:bit theap allocator.
   */
-inline void* operator new[](size_t size)
+inline void* operator new[](size_t size) throw(std::bad_alloc)
 {
     return microbit_malloc(size);
 }
@@ -152,7 +152,7 @@ inline void* operator new[](size_t size)
 /**
   * Overrides the 'delete' operator globally, and redirects calls to the micro:bit theap allocator.
   */
-inline void operator delete(void *ptr)
+inline void operator delete(void *ptr) throw()
 {
     microbit_free(ptr);
 }

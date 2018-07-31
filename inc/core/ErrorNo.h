@@ -82,8 +82,5 @@ enum PanicCode{
 
     // Dereference of a NULL pointer through the ManagedType class,
     MICROBIT_NULL_DEREFERENCE = 40,
-
-    // A requested hardware peripheral could not be found,
-    MICROBIT_HARDWARE_UNAVAILABLE = 50,
 };
 #endif

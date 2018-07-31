@@ -77,7 +77,7 @@ bool ble_running()
 }
 
 /**
- * Derive a unique, consistent serial number of this device from internal data.
+ * Derived a unique, consistent serial number of this device from internal data.
  *
  * @return the serial number of this device.
  */
