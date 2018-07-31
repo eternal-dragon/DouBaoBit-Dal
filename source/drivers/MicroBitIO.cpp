@@ -46,7 +46,9 @@ MicroBitIO::MicroBitIO(int ID_P0, int ID_P1, int ID_P2,
                        int ID_P9, int ID_P10,int ID_P11,
                        int ID_P12,int ID_P13,int ID_P14,
                        int ID_P15,int ID_P16,int ID_P19,
-                       int ID_P20) :
+                       int ID_P20, int ID_D0, int ID_D1,
+                       int ID_D2, int ID_D6, int ID_D7,
+                       int ID_D8) :
     P0 (ID_P0, MICROBIT_PIN_P0, PIN_CAPABILITY_ALL),             //P0 is the left most pad (ANALOG/DIGITAL/TOUCH)
     P1 (ID_P1, MICROBIT_PIN_P1, PIN_CAPABILITY_ALL),             //P1 is the middle pad (ANALOG/DIGITAL/TOUCH)
     P2 (ID_P2, MICROBIT_PIN_P2, PIN_CAPABILITY_ALL),             //P2 is the right most pad (ANALOG/DIGITAL/TOUCH)
@@ -65,6 +67,12 @@ MicroBitIO::MicroBitIO(int ID_P0, int ID_P1, int ID_P2,
     P15(ID_P15,MICROBIT_PIN_P15,PIN_CAPABILITY_STANDARD),        //MOSI
     P16(ID_P16,MICROBIT_PIN_P16,PIN_CAPABILITY_STANDARD),        //PIN 16
     P19(ID_P19,MICROBIT_PIN_P19,PIN_CAPABILITY_STANDARD),        //SCL
-    P20(ID_P20,MICROBIT_PIN_P20,PIN_CAPABILITY_STANDARD)         //SDA
+    P20(ID_P20,MICROBIT_PIN_P20,PIN_CAPABILITY_STANDARD),         //SDA
+    D0(ID_D0, MICROBIT_PIN_D0, PIN_CAPABILITY_STANDARD),    //PIN 7
+    D1(ID_D1, MICROBIT_PIN_D1, PIN_CAPABILITY_STANDARD),    //PIN 8
+    D2(ID_D2, MICROBIT_PIN_D2, PIN_CAPABILITY_STANDARD),    //PIN 9
+    D6(ID_D6, MICROBIT_PIN_D6, PIN_CAPABILITY_STANDARD),    //PIN 13
+    D7(ID_D7, MICROBIT_PIN_D7, PIN_CAPABILITY_STANDARD),    //PIN 14
+    D8(ID_D8, MICROBIT_PIN_D8, PIN_CAPABILITY_STANDARD)    //PIN 15
 {
 }
