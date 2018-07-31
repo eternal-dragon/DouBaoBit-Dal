@@ -67,13 +67,13 @@ MicroBitDisplay::MicroBitDisplay(uint16_t id, const MatrixMap &map) :
     col_mask = 0;
     strobeRow = 0;
     row_mask = 0;
-
+/*
     for (int i = matrixMap.rowStart; i < matrixMap.rowStart + matrixMap.rows; i++)
         row_mask |= 0x01 << i;
 
     for (int i = matrixMap.columnStart; i < matrixMap.columnStart + matrixMap.columns; i++)
         col_mask |= 0x01 << i;
-
+*/
     LEDMatrix = new PortOut(Port0, row_mask | col_mask);
 
     this->greyscaleBitMsk = 0x01;
@@ -1105,13 +1105,13 @@ void MicroBitDisplay::setEnable(bool enableDisplay)
 
     uint32_t rmask = 0;
     uint32_t cmask = 0;
-/*
+
     for (int i = matrixMap.rowStart; i < matrixMap.rowStart + matrixMap.rows; i++)
         rmask |= 0x01 << i;
 
     for (int i = matrixMap.columnStart; i < matrixMap.columnStart + matrixMap.columns; i++)
         cmask |= 0x01 << i;
-*/
+
     if (enableDisplay)
     {
         PortOut p(Port0, rmask | cmask);
